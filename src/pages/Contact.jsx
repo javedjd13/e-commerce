@@ -74,6 +74,7 @@ const Contact = () => (
                 error={touched.message && Boolean(errors.message)}
                 helperText={<ErrorMessage name="message" />}
               />
+              {/* Button */}
               <Button
                 type="submit"
                 variant="contained"
