@@ -6,6 +6,7 @@ import Sidebar from "./SideBar";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+//this is drawer Width
 const drawerWidth = 240;
 
 const Main = styled("main", {
@@ -29,6 +30,7 @@ const Main = styled("main", {
 
 const Header = ({ children }) => {
   const theme = useTheme();
+  //mobile screen view 
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [open, setOpen] = React.useState(false);
   const [searchInput, setSearchInput] = React.useState("");
