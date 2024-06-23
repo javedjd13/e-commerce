@@ -41,11 +41,9 @@ const Sidebar = ({ open, handleDrawerClose, isSmallScreen }) => {
   return (
     <Drawer
       sx={{
-        // width: drawerWidthCurrent,
         width: isSmallScreen ? drawerWidthSmall : drawerWidth,
         flexShrink: 0,
         "& .MuiDrawer-paper": {
-          // width: drawerWidthCurrent,
           width: isSmallScreen ? drawerWidthSmall : drawerWidth,
           boxSizing: "border-box",
         },
@@ -55,6 +53,7 @@ const Sidebar = ({ open, handleDrawerClose, isSmallScreen }) => {
       open={open}
     >
       <DrawerHeader>
+        {/* icon Button */}
         <IconButton onClick={handleDrawerClose}>
           {theme.direction === "ltr" ? (
             <ChevronLeftIcon />
