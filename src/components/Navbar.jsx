@@ -78,6 +78,7 @@ const Navbar = ({
           ))}
         </Box>
         <Box sx={{ marginLeft: "auto", width: "12.5rem" }}>
+          {/* Search Box Of Header */}
           <Box
             sx={{
               display: "flex",
