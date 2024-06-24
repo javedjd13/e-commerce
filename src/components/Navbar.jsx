@@ -50,6 +50,7 @@ const Navbar = ({
     { text: "Contact", path: "/contact" },
     { text: "Login", path: "/login" },
     { text: "Products", path: "/products" },
+    { text: "Paginated", path: "/paginated" },
   ];
 
   return (
