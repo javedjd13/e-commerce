@@ -30,7 +30,7 @@ const Main = styled("main", {
 
 const Header = ({ children }) => {
   const theme = useTheme();
-  //mobile screen view 
+  //mobile screen view
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [open, setOpen] = React.useState(false);
   const [searchInput, setSearchInput] = React.useState("");

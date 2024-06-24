@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Products from "../pages/Products";
 import Header from "../components/Header";
 import Product from "../pages/Product";
+import Paginated from "../pages/Paginated";
 
 const AppRoutes = () => {
   return (
@@ -18,7 +19,9 @@ const AppRoutes = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<Product />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/paginated" element={<Paginated />} />
         </Routes>
       </Header>
     </Router>

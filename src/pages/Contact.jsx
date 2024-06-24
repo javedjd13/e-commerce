@@ -14,8 +14,13 @@ const Contact = () => (
         validationSchema={Yup.object({
           name: Yup.string().required("Required"),
           email: Yup.string()
-            .email("Invalid email address")
-            .required("Required"),
+            .email("Invalid email")
+            .required("Email is required")
+            .matches(
+              /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{3,}$/i,
+              "Invalid email format"
+            )
+            .required("Email is required"),
           message: Yup.string().required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
