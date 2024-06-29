@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Box } from "@mui/material";
+import Paginated from "../pages/Paginated";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <Box>
+      <Paginated />
+    </Box>
+  );
+};
 
-export default Home
+export default Home;
