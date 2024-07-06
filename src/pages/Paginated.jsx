@@ -92,7 +92,7 @@ const Paginated = () => {
   return (
     <Box>
       {/* Search Products Input */}
-      <Box display="flex" justifyContent="center" margin="20px 0">
+      <Box display="flex" justifyContent="center" margin="1.25rem 0">
         <TextField
           size="small"
           label="Search Products"
@@ -110,7 +110,7 @@ const Paginated = () => {
           id="price"
           className="search-input"
         />
-        <Box marginLeft="20px">
+        <Box marginLeft="1.25rem">
           {/* Select Category Dropdown */}
           <FormControl variant="outlined" size="large">
             <InputLabel>Select category</InputLabel>
@@ -131,7 +131,6 @@ const Paginated = () => {
           </FormControl>
         </Box>
       </Box>
-      {/* Products Display Section */}
       <Box
         display="flex"
         justifyContent="space-evenly"
@@ -139,62 +138,72 @@ const Paginated = () => {
         className="products-item"
       >
         {products &&
-          products.products.map((product) => (
-            <Card
-              key={product.id}
-              sx={{
-                maxWidth: 345,
-                marginY: 2,
-                marginX: 2,
-              }}
-            >
-              <Link
-                to={`/products/${product.id}`}
-                style={{
-                  color: "black",
-                  textDecoration: "none",
+          products.products.map((product, id) => (
+            <Box sx={{ display: "flex", alignItems: "center" }} key={id}>
+              <Card
+                sx={{
+                  justifyContent: "center",
+                  maxWidth: "18.75rem",
+                  // minWidth: "80px",
+                  margin: "1rem",
+                  padding: "0 30px",
                 }}
+                key={product.id}
               >
-                <CardMedia
-                  sx={{ height: 140 }}
-                  image={product.thumbnail}
-                  title={product.title}
-                  className="cards"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {product.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {product.description}
-                  </Typography>
-                  <Typography
+                <Link
+                  to={`/products/${product.id}`}
+                  style={{
+                    color: "black",
+                    textDecoration: "none",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={product.thumbnail}
+                    alt={product.title}
                     sx={{
-                      fontWeight: "bold",
-                      mt: 2,
+                      width: "100%",
+                      height: "auto",
+                      objectFit: "contain",
                     }}
-                    variant="body2"
-                    color="text.secondary"
-                  >
-                    {product.price}$
-                  </Typography>
-                </CardContent>
-              </Link>
-            </Card>
+                    className="cards"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {product.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {product.description}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontWeight: "bold",
+                        mt: 2,
+                      }}
+                      variant="body2"
+                      color="text.secondary"
+                    >
+                      {product.price}$
+                    </Typography>
+                  </CardContent>
+                </Link>
+              </Card>
+            </Box>
           ))}
       </Box>
+
       {/* Pagination Buttons */}
       <Box
         display="flex"
         justifyContent="center"
-        marginTop="20px"
-        marginBottom="10px"
+        marginTop="1.25rem"
+        marginBottom=".625rem"
       >
         <Button
           variant="contained"
           disabled={skip === 0} // Disable previous button if already on first page
           onClick={handlePrevClick}
-          sx={{ marginRight: "10px" }}
+          sx={{ marginRight: ".625rem" }}
         >
           Prev
         </Button>

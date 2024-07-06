@@ -48,7 +48,7 @@ const Navbar = ({
     { text: "Home", path: "/" },
     { text: "About", path: "/about" },
     { text: "Contact", path: "/contact" },
-    { text: "Login", path: "/login" },
+    { text: "Sign Up", path: "/login" },
   ];
 
   return (
@@ -84,7 +84,7 @@ const Navbar = ({
               alignItems: "center",
               backgroundColor: alpha("#ffffff", 0.15),
               borderRadius: 4,
-              padding: "2px 4px",
+              padding: ".125rem .25rem",
             }}
           >
             <SearchIcon sx={{ mr: 1 }} />

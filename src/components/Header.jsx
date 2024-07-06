@@ -7,7 +7,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 //this is drawer Width
-const drawerWidth = 240;
+const drawerWidth = 120;
 
 const Main = styled("main", {
   shouldForwardProp: (prop) => prop !== "open",

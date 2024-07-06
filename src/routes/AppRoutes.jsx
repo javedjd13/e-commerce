@@ -8,6 +8,7 @@ import Products from "../pages/Products";
 import Header from "../components/Header";
 import Product from "../pages/Product";
 import Paginated from "../pages/Paginated";
+import UserData from "../pages/UserData";
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
           <Route path="/products/:id" element={<Product />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/paginated" element={<Paginated />} />
+          <Route path="/userdata" element={<UserData />} />
         </Routes>
       </Header>
     </Router>

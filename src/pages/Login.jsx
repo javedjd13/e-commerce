@@ -1,5 +1,4 @@
-// src/LoginForm.js
-
+// // src/LoginForm.js
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
@@ -14,6 +13,10 @@ const validationSchema = Yup.object().shape({
     .required("Email is required"),
   password: Yup.string()
     .min(6, "Password must be at least 6 characters")
+    .matches(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@])[A-Za-z\d@]+$/,
+      "Password must contain letters, numbers, and '@'"
+    )
     .required("Password is required"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Passwords must match")

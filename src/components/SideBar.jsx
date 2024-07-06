@@ -17,7 +17,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
 const drawerWidth = 240;
-const drawerWidthSmall = 140;
+const drawerWidthSmall = 135;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -29,14 +29,14 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 const Sidebar = ({ open, handleDrawerClose, isSmallScreen }) => {
   const theme = useTheme();
-  // const drawerWidthCurrent = isSmallScreen ? drawerWidthSmall : drawerWidth;
   const navItems = [
     { text: "Home", path: "/" },
     { text: "About", path: "/about" },
     { text: "Contact", path: "/contact" },
-    { text: "Login", path: "/login" },
+    { text: "Sign Up", path: "/login" },
     { text: "Products", path: "/products" },
     { text: "Paginated", path: "/paginated" },
+    { text: "User Data", path: "/userdata" },
   ];
 
   return (
