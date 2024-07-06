@@ -48,7 +48,7 @@ const Navbar = ({
     { text: "Home", path: "/" },
     { text: "About", path: "/about" },
     { text: "Contact", path: "/contact" },
-    { text: "Sign Up", path: "/login" },
+    { text: "Sign Up", path: "/signup" },
   ];
 
   return (

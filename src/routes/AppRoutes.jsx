@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 import Products from "../pages/Products";
 import Header from "../components/Header";
 import Product from "../pages/Product";
@@ -18,7 +18,7 @@ const AppRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
           <Route path="/product/:id" element={<Product />} />

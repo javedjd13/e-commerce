@@ -33,7 +33,7 @@ const Sidebar = ({ open, handleDrawerClose, isSmallScreen }) => {
     { text: "Home", path: "/" },
     { text: "About", path: "/about" },
     { text: "Contact", path: "/contact" },
-    { text: "Sign Up", path: "/login" },
+    { text: "Sign Up", path: "/signup" },
     { text: "Products", path: "/products" },
     { text: "Paginated", path: "/paginated" },
     { text: "User Data", path: "/userdata" },
